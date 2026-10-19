@@ -1,0 +1,85 @@
+Conference name ICORE 2026 rank
+ECML PKDD A
+AISTATS A
+ICML A*
+AAAI A*
+AAMAS A
+ACII B
+BMVC A
+ICDM A*
+KDD A*
+ICLR A*
+ECAI A
+HCOMP B
+
+.
+Interested topic:
+1.
+ Title: Few-Shot Learning for Rare Lung Disease Detection in Chest X-rays
+ Problem: Rare diseases have very few example images, so models fail on them.
+ Keywords: few labels, rare disease, chest X-ray, transfer learning
+ Dataset: ChestX-ray14, CheXpert
+2.
+ Title: Uncertainty Estimation for Safer Skin Cancer Detection
+ Problem: Models give confident answers even when they are wrong. Doctors need to know
+when not to trust them.
+ Keywords: uncertainty, confidence, skin cancer, safe AI
+ Dataset: ISIC
+3.
+ Title: Why Medical Models Fail in New Hospitals: A Study of Data Shift
+ Problem: A model trained at one hospital often works worse at another because of different
+machines and patients.
+ Keywords: data shift, different hospitals, generalization, robustness
+ Dataset: CheXpert + ChestX-ray14 (train on one, test on the other)
+4.
+ Title: Do Medical AI Models Work Equally Well for Men, Women, and All Age Groups?
+ Problem: Models may be less accurate for some groups, and few methods fix this well.
+ Keywords: fairness, bias, gender, age, patient groups
+
+ Dataset: CheXpert, MIMIC-IV
+5.
+ Title: Are Grad-CAM Heatmaps Really Reliable for Medical Image Models?
+ Problem: Heatmaps look convincing, but they sometimes highlight the wrong area. There is no
+good way to measure whether explanations are correct.
+ Keywords: explainable AI, heatmap, trust, Grad-CAM
+ Dataset: Any public imaging dataset
+6.
+ Title: Training Deep Models on Noisy Doctor Labels in Medical Images
+ Problem: Doctors sometimes disagree, and labels made by automatic text reading contain
+errors.
+ Keywords: noisy labels, doctor disagreement, label errors
+ Dataset: CheXpert (its labels are auto-generated and noisy)
+7.
+ Title: Handling Missing Values in Hospital Records for Disease Prediction
+ Problem: Real patient records have many blank fields, and the best way to deal with them is still
+unclear.
+ Keywords: missing data, patient records, ICU, prediction
+ Dataset: MIMIC-IV, PhysioNet
+8
+ Title: Early Prediction of Sepsis from ICU Vital Signs Using Deep Learning
+ Problem: Sepsis is deadly, and predicting it hours earlier is still hard and often gives false alarms.
+ Keywords: early warning, sepsis, ICU, time series
+ Dataset: PhysioNet Sepsis Challenge, MIMIC-IV
+9.
+ Title: Lightweight Deep Learning for Heart Rhythm Detection on Low-Power Devices
+ Problem: Strong models are too big for smartwatches, and small models lose accuracy.
+ Keywords: small model, smartwatch, ECG, heart rhythm
+ Dataset: PhysioNet ECG datasets
+10.
+ Title: Detecting Depression from Speech Across Different Languages and Accents
+ Problem: Most models are trained on one language and fail on others.
+ Keywords: depression, speech, voice, language difference
+ Dataset: DAIC-WOZ (needs access request), other public speech sets
+11.
+ Title: Measuring Made-Up Findings in AI-Generated Radiology Reports
+ Problem: AI that writes X-ray reports sometimes invents findings that are not in the image.
+There is no standard way to catch this.
+ Keywords: report writing, made-up facts, hallucination, radiology
+ Dataset: MIMIC-CXR, IU X-ray
+
+12.
+ Title: Learning When to Pass Hard Cases to Doctors in Medical Image Diagnosis
+ Problem: The AI should handle easy cases and send difficult ones to a human, but deciding
+which is which is not solved.
+ Keywords: human and AI teamwork, defer to doctor, hard cases
+ Dataset: CheXpert, ISIC
