@@ -49,3 +49,52 @@ Learn how neural networks measure relationships between samples.
 Focus: Learned similarity functions
 
 *************************************************************************
+
+
+Learn popular datasets
+Start with commonly used Few-Shot Learning datasets.
+Dataset	                   Purpose
+Omniglot	                  Handwritten character classification
+MiniImageNet              	Image classification
+CIFAR-FS	                  Few-shot image classification
+CUB-200	                    Fine-grained bird classification
+tieredImageNet            	Large-scale image classification
+
+recommendation: Start with Omniglot, then move to MiniImageNet.
+
+
+
+*****************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
