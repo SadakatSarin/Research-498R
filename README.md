@@ -19,7 +19,7 @@ This repository documents my learning, research paper reviews, model implementat
 | Few-Shot Learning Fundamentals | In Progress |
 | Metric Learning                | Not Started |
 | Meta-Learning                  | Not Started |
-| Prototypical Networks          | Not Started |
+| Prototypical Networks          | work done |
 | Matching Networks              | Not Started |
 | MAML                           | Not Started |
 
