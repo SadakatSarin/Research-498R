@@ -1,4 +1,3 @@
-
 # MPA: Multimodal Prototype Augmentation for Few-Shot Learning (AAAI 2026)
 
 **Authors:** Liwen Wu, Wei Wang, Lei Zhao, Zhan Gao, Qika Lin, Shaowen Yao, Zuozhu Liu, Bin Pu  
@@ -29,7 +28,7 @@ MPA uses a frozen pre-trained **CLIP (ViT-L/14)** image encoder ($f$) and text e
 * Simulates natural changes in viewing distance, camera angles, and lighting from each raw support image:
   * **Naturalistic Views:** Center crops ($120, 170, 200$ pixels), rotations ($45^\circ, 90^\circ, 180^\circ, 270^\circ, 315^\circ$), and color jitter.
   * **Geometric Views:** Horizontal reflections (flips).
-* Encodes all augmented views through the **CLIP image encoder** to create a richer, multi-perspective visual cluster.
+- Encodes all augmented views through the **CLIP image encoder** to create a richer, multi-perspective visual cluster.
 
 ### Module 3: Adaptive Uncertain Class Absorber (AUCA)
 * Creates an extra synthetic **"Uncertain Class"** ($D_u$) during training to absorb noisy boundary samples and reduce overlap between real classes.
@@ -38,7 +37,7 @@ MPA uses a frozen pre-trained **CLIP (ViT-L/14)** image encoder ($f$) and text e
 
 ---
 
-## 3. Benchmark Results
+## 3. Paper Benchmark Results
 
 MPA was evaluated across **4 single-domain** and **6 cross-domain** benchmarks, achieving massive improvements especially in the hardest **5-way 1-shot** setting:
 
@@ -58,7 +57,22 @@ MPA was evaluated across **4 single-domain** and **6 cross-domain** benchmarks, 
 
 ---
 
-## 4. Evolution: 2017 ProtoNet vs. 2026 MPA
+## 4. My PyTorch Reproduction (Kaggle)
+
+Implemented a lightweight reproduction of MPA (`MPA_CIFAR_FS.ipynb`) on **Kaggle (NVIDIA T4 GPU)** using Hugging Face `transformers` (`openai/clip-vit-base-patch32`) and `scikit-learn` Logistic Regression across 100 unseen test episodes on **CIFAR-FS** (classes 64–99):
+
+| Setting | Dataset | Backbone | Episodes | Accuracy |
+| :--- | :--- | :--- | :--- | :--- |
+| **5-Way 1-Shot** | CIFAR-FS (Unseen Classes) | CLIP `ViT-B/32` | 100 | **`87.28%`** |
+
+### Key Implementation Takeaways
+* **Zero Backbone Training:** Freezing CLIP and only fitting a multi-class Logistic Regression classifier per episode makes training fast and memory-light.
+* **Multimodal Synergy:** Combining 5 paraphrased text prompts (LMSE) with 5 visual views per support image (HMA) turns a single 1-shot image into 10 complementary feature vectors, while AUCA prevents boundary overfitting.
+* **Transformers v5 Compatibility:** Unwrapped `BaseModelOutputWithPooling` via `.pooler_output` before L2-normalizing embeddings.
+
+---
+
+## 5. Evolution: 2017 ProtoNet vs. 2026 MPA
 
 | Feature | Prototypical Networks (2017) | MPA (AAAI 2026) |
 | :--- | :--- | :--- |
@@ -67,6 +81,3 @@ MPA was evaluated across **4 single-domain** and **6 cross-domain** benchmarks, 
 | **Boundary Handling** | None (nearest prototype only) | Synthetic "Uncertain Class" via interpolation + Gaussian noise |
 | **Classifier** | Squared Euclidean distance | Trainable Logistic Regression |
 | **miniImageNet (5-way 1-shot)** | `49.42%` | **`98.87%`** |
-```[cite: 14, 15, 16, 17, 18, 19, 20, 24]
-
-
