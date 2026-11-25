@@ -40,11 +40,11 @@ Pass an unlabeled test image (the *query point*) through the same encoder and ca
 
 The closest prototype determines the predicted class.
 
-\[
+$$
 p_\phi(y=k|x) =
 \frac{\exp(-d(f_\phi(x),c_k))}
 {\sum_{k'}\exp(-d(f_\phi(x),c_{k'}))}
-\]
+$$
 
 #### 3. Episodic Training
 
