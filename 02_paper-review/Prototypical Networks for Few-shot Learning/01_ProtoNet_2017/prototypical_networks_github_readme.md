@@ -32,7 +32,7 @@ $$
 c_k = \frac{1}{|S_k|}\sum_{(x_i,y_i)\in S_k} f_\phi(x_i)
 $$
 
-Here, $(c_k$) represents the prototype of class \(k\).
+Here, $(c_k$) represents the prototype of class $(k$).
 
 #### 2. Classify Query Images
 
@@ -52,15 +52,15 @@ Instead of conventional mini-batch training, the model trains on simulated few-s
 
 Each episode contains:
 
-- \(N_C\): Number of classes (ways).
-- \(N_S\): Number of support examples per class (shots).
-- \(N_Q\): Number of query examples per class.
+- $(N_C$): Number of classes (ways).
+- $(N_S$): Number of support examples per class (shots).
+- $(N_Q$): Number of query examples per class.
 
 This training strategy helps the model learn how to generalize to previously unseen classes.
 
 #### 4. Zero-Shot Extension
 
-When no example images are available for a class, a separate network \(g_\vartheta(v_k)\) maps class metadata or attributes (\(v_k\)) into the shared embedding space.
+When no example images are available for a class, a separate network $(g_\vartheta(v_k)$) maps class metadata or attributes ($(v_k$)) into the shared embedding space.
 
 The resulting embedding serves as the class prototype.
 
@@ -91,8 +91,8 @@ The episodic sampler dynamically generates N-way K-shot classification tasks.
 
 It performs the following operations:
 
-1. Randomly samples \(N\) classes.
-2. Selects \(K\) support images per class.
+1. Randomly samples $(N$) classes.
+2. Selects $(K$) support images per class.
 3. Selects additional query images per class.
 4. Returns separate Support and Query sets.
 
