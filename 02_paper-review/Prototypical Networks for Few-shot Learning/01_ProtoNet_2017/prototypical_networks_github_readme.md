@@ -32,7 +32,7 @@ $$
 c_k = \frac{1}{|S_k|}\sum_{(x_i,y_i)\in S_k} f_\phi(x_i)
 $$
 
-Here, \(c_k\) represents the prototype of class \(k\).
+Here, $(c_k$) represents the prototype of class \(k\).
 
 #### 2. Classify Query Images
 
