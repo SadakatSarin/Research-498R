@@ -16,10 +16,11 @@ This repository documents my learning, research paper reviews, model implementat
 
 | Topic                          | Status      |
 | ------------------------------ | ----------- |
+| Prototypical Networks          | work done |
+|MPA: Multimodal Prototype Augmentation for Few-Shot Learning| In Progress |
 | Few-Shot Learning Fundamentals | In Progress |
 | Metric Learning                | Not Started |
 | Meta-Learning                  | Not Started |
-| Prototypical Networks          | work done |
 | Matching Networks              | Not Started |
 | MAML                           | Not Started |
 
