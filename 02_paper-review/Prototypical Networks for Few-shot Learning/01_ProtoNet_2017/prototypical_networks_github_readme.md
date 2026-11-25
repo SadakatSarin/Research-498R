@@ -202,10 +202,10 @@ This experiment investigates how well Prototypical Networks generalize from simp
 
 | Experiment | Dataset | Distance Metric | 5-Way 5-Shot Accuracy | Notes |
 |---|---|---|---|---|
-| Baseline Implementation | Omniglot | Squared Euclidean | **98.60%** | 1,000 episodes, 20-way training, no rotation augmentation |
+| Baseline Implementation | Omniglot | Squared Euclidean | **98.42%** | 1,000 episodes, 20-way training, no rotation augmentation |
 | Original Paper (Table 1) | Omniglot | Squared Euclidean | **99.70%** | 60-way training with 90° rotation augmentation |
-| Ablation: Euclidean | Omniglot | Squared Euclidean | TBD | Tests mean-based prototype classification |
-| Ablation: Cosine | Omniglot | Cosine Similarity | TBD | Compares an alternative distance metric |
+| Ablation: Euclidean | Omniglot | Squared Euclidean | **98.46%** | Tests mean-based prototype classification |
+| Ablation: Cosine | Omniglot | Cosine Similarity | **97.28%** | Compares an alternative distance metric |
 | Color Object Benchmark | CIFAR-FS | Squared Euclidean | TBD | More complex natural RGB images |
 
 *Note: TBD results should be replaced with the actual accuracy obtained from the corresponding notebook cells.*
