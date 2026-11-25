@@ -28,9 +28,9 @@ The approach consists of four main steps:
 
 Pass the labeled examples of each class (the *support set* \(S_k\)) through the encoder and calculate their mean embedding.
 
-\[
+$$
 c_k = \frac{1}{|S_k|}\sum_{(x_i,y_i)\in S_k} f_\phi(x_i)
-\]
+$$
 
 Here, \(c_k\) represents the prototype of class \(k\).
 
