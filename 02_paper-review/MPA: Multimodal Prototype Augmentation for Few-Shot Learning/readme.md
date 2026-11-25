@@ -69,4 +69,4 @@ MPA was evaluated across **4 single-domain** and **6 cross-domain** benchmarks, 
 | **miniImageNet (5-way 1-shot)** | `49.42%` | **`98.87%`** |
 ```[cite: 14, 15, 16, 17, 18, 19, 20, 24]
 
-Would you like to build a lightweight Colab implementation of **MPA** (using OpenAI's free `clip` / Hugging Face `CLIPModel` on CIFAR-FS) next so you can run it and compare it directly against your 2017 ProtoNet notebook?****
+
