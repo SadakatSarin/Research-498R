@@ -206,7 +206,7 @@ This experiment investigates how well Prototypical Networks generalize from simp
 | Original Paper (Table 1) | Omniglot | Squared Euclidean | **99.70%** | 60-way training with 90° rotation augmentation |
 | Ablation: Euclidean | Omniglot | Squared Euclidean | **98.46%** | Tests mean-based prototype classification |
 | Ablation: Cosine | Omniglot | Cosine Similarity | **97.28%** | Compares an alternative distance metric |
-| Color Object Benchmark | CIFAR-FS | Squared Euclidean | TBD | More complex natural RGB images |
+| Color Object Benchmark | CIFAR-FS | Squared Euclidean | **68.08%** | More complex natural RGB images |
 
 *Note: TBD results should be replaced with the actual accuracy obtained from the corresponding notebook cells.*
 
