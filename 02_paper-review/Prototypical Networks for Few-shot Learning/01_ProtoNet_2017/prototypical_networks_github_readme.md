@@ -212,7 +212,7 @@ This experiment investigates how well Prototypical Networks generalize from simp
 
 ### t-SNE Cluster Visualization
 
-![t-SNE Visualization of Unseen Omniglot Embeddings and Prototypes](https://github.com/SadakatSarin/Research-498R/raw/main/02_paper-review/Prototypical%20Networks%20for%20Few-shot%20Learning/01_ProtoNet_2017/tsne_prototypes.jpg)
+![t-SNE Visualization of Unseen Omniglot Embeddings and Prototypes](https://github.com/SadakatSarin/Research-498R/raw/main/02_paper-review/Prototypical%20Networks%20for%20Few-shot%20Learning/01_ProtoNet_2017/tsne_prototypes.png)
 
 *Unseen test character embeddings projected into 2D using t-SNE. The black X markers represent the computed class prototypes.*
 
