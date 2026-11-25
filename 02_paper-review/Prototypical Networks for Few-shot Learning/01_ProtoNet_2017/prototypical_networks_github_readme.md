@@ -20,19 +20,19 @@ Earlier approaches often relied on complex attention mechanisms or LSTM-based me
 
 ### Core Idea
 
-Prototypical Networks learn a neural network encoder \(f_\phi\) that maps input images into a feature space where samples belonging to the same class cluster around a single center point called a **prototype**.
+Prototypical Networks learn a neural network encoder $f_\phi$ that maps input images into a feature space where samples belonging to the same class cluster around a single center point called a **prototype**.
 
 The approach consists of four main steps:
 
 #### 1. Compute Class Prototypes
 
-Pass the labeled examples of each class (the *support set* \(S_k\)) through the encoder and calculate their mean embedding.
+Pass the labeled examples of each class (the *support set* $S_k$) through the encoder and calculate their mean embedding.
 
 $$
 c_k = \frac{1}{|S_k|}\sum_{(x_i,y_i)\in S_k} f_\phi(x_i)
 $$
 
-Here, $(c_k$) represents the prototype of class $(k$).
+Here, $c_k$ represents the prototype of class $k$.
 
 #### 2. Classify Query Images
 
@@ -52,15 +52,15 @@ Instead of conventional mini-batch training, the model trains on simulated few-s
 
 Each episode contains:
 
-- $(N_C$): Number of classes (ways).
-- $(N_S$): Number of support examples per class (shots).
-- $(N_Q$): Number of query examples per class.
+- $N_C$: Number of classes (ways).
+- $N_S$: Number of support examples per class (shots).
+- $N_Q$: Number of query examples per class.
 
 This training strategy helps the model learn how to generalize to previously unseen classes.
 
 #### 4. Zero-Shot Extension
 
-When no example images are available for a class, a separate network $(g_\vartheta(v_k)$) maps class metadata or attributes ($(v_k$)) into the shared embedding space.
+When no example images are available for a class, a separate network $g_\vartheta(v_k)$ maps class metadata or attributes ($v_k$) into the shared embedding space.
 
 The resulting embedding serves as the class prototype.
 
@@ -81,7 +81,7 @@ The resulting embedding serves as the class prototype.
 #### 1. Dataset Preparation
 
 - Downloads the Omniglot dataset.
-- Resizes images to \(28 \times 28\) grayscale tensors.
+- Resizes images to $28 \times 28$ grayscale tensors.
 - Groups images by character label.
 - Separates training (`background=True`) and unseen test (`background=False`) classes.
 
@@ -91,8 +91,8 @@ The episodic sampler dynamically generates N-way K-shot classification tasks.
 
 It performs the following operations:
 
-1. Randomly samples $(N$) classes.
-2. Selects $(K$) support images per class.
+1. Randomly samples $N$ classes.
+2. Selects $K$ support images per class.
 3. Selects additional query images per class.
 4. Returns separate Support and Query sets.
 
@@ -185,7 +185,7 @@ The model is adapted to work with natural RGB images using a modified encoder ca
 **Configuration:**
 
 - Dataset: CIFAR-FS.
-- Input size: \(32 \times 32\).
+- Input size: $32 \times 32$.
 - Input channels: 3 (RGB).
 - Embedding dimension: 256.
 - Training classes: 64.
@@ -241,4 +241,8 @@ This limitation motivates further research into:
 
 ## 5. References
 
-Snell, J., Swersky, K., & Zemel, R. (2017). *Prototypical Networks for Few-shot Learning*. Advances in Neural Information Processing Systems
+Snell, J., Swersky, K., & Zemel, R. (2017). *Prototypical Networks for Few-shot Learning*. Advances in Neural Information Processing Systems (NeurIPS 2017).
+
+- **Paper:** https://arxiv.org/abs/1703.05175
+- **Implementation:** [ProtoNet_Omniglot.ipynb](./ProtoNet_Omniglot.ipynb)
+- **Repository:** https://github.com/SadakatSarin/Research-498R
